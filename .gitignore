@@ -40,3 +40,7 @@ next-env.d.ts
 
 # vscode workspace config folder
 .vscode
+
+# archive
+archive/
+archive/*

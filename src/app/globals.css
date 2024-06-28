@@ -2,29 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+* THEME VARIABLES
+*
+* Foreground: text
+* foreground-primary: text
+* foreground-secondary: headers
+*/
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* default: darkmode */
+  --background: 270 6% 7%;
+  --background-secondary: 270 6% 7%;
+  --foreground: 260 5% 62%;
+  --foreground-secondary: 220, 13%, 91%;
+
+  --surface: ;
+  --surface-secondary: ;
+
+
+  --accent: 258 90% 66%;
+  --accent-foreground: 258 90% 66%;
+
+  --border: 217, 19%, 27%;
+  --border-secondary: ;
+
+
+  --shadow-sm: ;
+  --shadow-md: ;
+  --shadow-lg: ;
+  --shadow-xl: ;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.light {
+  --background: 0 0% 98%;
+  --background-secondary: 270 6% 7%;
+  --foreground: 220 9% 46%;
+  --foreground-secondary: 224, 71%, 4%;
+
+  --surface: ;
+  --surface-secondary: ;
+
+  --primary: ;
+  --primary-foreground: ;
+  --secondary: ;
+  --secondary-foreground: ;
+
+  --accent: 258 90% 66%;
+  --accent-foreground: 258 90% 66%;
+  --border: 220, 13%, 91%;
+  --border-secondary: ;
+
+  --shadow-sm: ;
+  --shadow-md: ;
+  --shadow-lg: ;
+  --shadow-xl: ;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+/* darkmode 2: wikipedia inspired */
+.darkmode-2 {
+  --background: 0, 0%, 13%;
+  --background-secondary: ;
+  --foreground: 0, 0%, 64%;
+  --foreground-secondary: 0, 0%, 98%;
+
+  --surface: 220, 7%, 16%;
+  --surface-secondary: ;
+
+  --accent: ;
+  --accent-foreground: ;
+
+  --border: 0, 0%, 26%;
+  --border-secondary: ;
+
+  --icon: ;
+  --icon-secondary: 0, 0%, 74%;
+
+  --shadow-sm: ;
+  --shadow-md: ;
+  --shadow-lg: ;
+  --shadow-xl: ;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+/* 
+* GENERAL CLASSES
+*/
+.container-4xl {
+  @apply max-w-4xl mx-auto
 }

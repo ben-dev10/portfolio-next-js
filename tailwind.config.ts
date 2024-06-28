@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { novelUIPlugin } from "./src/utils/lib/novel-ui-tw-plugin";
 
 const config: Config = {
   content: [
@@ -8,6 +9,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: { mini: "450px" },
+      colors: {},
+      fontSize: {
+        "12px": "12px",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -15,6 +21,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+    
+  plugins: [novelUIPlugin],
 };
 export default config;

@@ -17,8 +17,12 @@
         "name": "next"
       }
     ],
+   "baseUrl":".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"], 
+      "@/ui/*":["src/ui/*"],
+      "@/utils/*":["src/utils/*"],
+      "@/styles/*":["src/utils/styles/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
