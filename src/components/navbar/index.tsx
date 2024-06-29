@@ -7,6 +7,8 @@ import { Button } from "@/ui/button";
 import ThemeToggle from "./themeToggle";
 import navLogo from "public/logos/nard-logo-1.svg";
 import { SheetUI } from "./sheetui";
+import { usePathname } from "next/navigation";
+import "./navbar.css"
 
 function Logo() {
   return (
@@ -73,21 +75,40 @@ function Logo() {
 }
 
 function Links() {
+  const pathname = usePathname();
+  const isActive = (path: string) => path === pathname;
+
+  const NavLinks = [
+    { id: 1, name: "Gallery", path: "/gallery" },
+    { id: 1, name: "Work", path: "/work" },
+    { id: 1, name: "Resources", path: "/resources" },
+  ];
+
   return (
     <div className="space-x-3 dark:text-slate-50 hidden md:block">
-      <div className="">
-        {/* <Link href="/gallery">Gallery</Link>
-        <Link href="/work">Work</Link>
-        <Link href="/resources">Resources</Link> */}
-      </div>
+      <ul className="list-none text-foreground flex gap-2">
+        {NavLinks.map((link) => (
+          <li key={link.id}>
+            <Link
+              href={link.path}
+              id="navLink"
+              className={` relative ${isActive(link.path) ? "text-accent font-bold active" : ""}`}
+            >
+              {link.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
 
 function MenuIcon() {
-  return <div className="md:hidden">
-    <SheetUI />
-  </div>;
+  return (
+    <div className="md:hidden">
+      <SheetUI />
+    </div>
+  );
 }
 
 type work = { status: "away" | "available"; className?: string };
@@ -118,7 +139,7 @@ function CV() {
         <Button
           variant="pill"
           size="pill"
-          className="text-accent bg-accent text-white px-2 py-[2px] hover:border-green-300"
+          className="text-accent bg-accent flex text-white px-2 py-[2px] hover:border-green-300"
         >
           CV
           <Download size={14} className="ml-1" />
@@ -132,7 +153,7 @@ export default function NavBar() {
   useTheme();
   return (
     <div className="header-wrapper border-b border">
-      <div className="container-4xl w-full h-[56px]">
+      <div className="container-4xl w-full h-[60px]">
         <div className="primary-nav flex gap-x-3 items-center p-2 pt-3 md:pt-4 px-4">
           <MenuIcon />
           <Logo />

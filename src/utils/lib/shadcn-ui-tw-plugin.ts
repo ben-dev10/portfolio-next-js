@@ -2,7 +2,6 @@ import plugin from "tailwindcss/plugin";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 export const shadcnPlugin = plugin(
-  // 1. base layer utilities from index.css file
   function ({ addBase }) {
     addBase({
       ":root": {
@@ -80,8 +79,6 @@ export const shadcnPlugin = plugin(
       },
     });
   },
-
-  // 2. extending tailwind with utility classes
   {
     theme: {
       container: {

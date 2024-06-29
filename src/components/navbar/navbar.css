@@ -1,0 +1,15 @@
+.sheet-link {
+    @apply border-b border-dashed dark:border-slate-500 border-slate-300 pb-2 flex items-center gap-1 hover:text-accent
+}
+
+.active::after {
+    content: "";
+    height: 6px;
+    width: 6px;
+    border-radius: 999px;
+    background-color: hsl(var(--accent));
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}

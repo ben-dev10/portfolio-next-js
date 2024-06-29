@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import { novelUIPlugin } from "./src/utils/lib/novel-ui-tw-plugin";
+// import { shadcnPlugin } from "./src/utils/lib/shadcn-ui-tw-plugin";
 
 const config: Config = {
   content: [
@@ -13,6 +14,8 @@ const config: Config = {
       colors: {},
       fontSize: {
         "12px": "12px",
+        "13px": "13px",
+        "14px": "14px",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

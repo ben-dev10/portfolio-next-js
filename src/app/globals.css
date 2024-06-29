@@ -11,7 +11,6 @@
 */
 
 :root {
-  /* default: darkmode */
   --background: 270 6% 7%;
   --background-secondary: 270 6% 7%;
   --foreground: 260 5% 62%;
@@ -26,7 +25,6 @@
 
   --border: 217, 19%, 27%;
   --border-secondary: ;
-
 
   --shadow-sm: ;
   --shadow-md: ;
@@ -83,7 +81,6 @@
   --shadow-lg: ;
   --shadow-xl: ;
 }
-
 
 /* 
 * GENERAL CLASSES

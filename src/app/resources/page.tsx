@@ -1,9 +1,9 @@
-export default function Home() {
+export default function Resources() {
   return (
     <main>
       <div className="wrapper container-4xl">
         <div className="p-4">
-          <p className="">Home</p>
+          <p>Resources</p>
         </div>
       </div>
     </main>

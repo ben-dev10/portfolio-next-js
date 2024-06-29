@@ -3,6 +3,7 @@ import { Sheet, SheetContent, SheetFooter, SheetTrigger } from "@/ui/sheet";
 import Link from "next/link";
 import { useState } from "react";
 import { Bookmark, GalleryHorizontalEnd, Home, Layers } from "lucide-react";
+import "./navbar.css";
 
 export function SheetUI() {
   const [open, setOpen] = useState(false);
@@ -48,7 +49,7 @@ export function SheetUI() {
         </SheetTrigger>
         <SheetContent
           side="left"
-          className="w-full md:max-w-full flex flex-col"
+          className="w-full md:hidden absolute top-0 h-screen md:max-w-full flex flex-col bg-gray-500/50 backdrop-blur-[20px] p-5"
         >
           <div className="links gap-3 flex flex-col mt-5 text-[13px] border-slate-600  pb-2 max-w-[350px] w-[70%] mx-auto mb-auto">
             <div onClick={handleClick} className="space-y-3">
@@ -56,13 +57,13 @@ export function SheetUI() {
                 <Home size={16} />
                 Home
               </Link>
-              <Link href="/about" className="sheet-link">
+              <Link href="/gallery" className="sheet-link">
                 <Bookmark size={16} />
-                About
+                Gallery
               </Link>
-              <Link href="/projects" className="sheet-link">
+              <Link href="/work" className="sheet-link">
                 <GalleryHorizontalEnd size={16} />
-                Projects
+                Work
               </Link>
             </div>
           </div>

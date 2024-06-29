@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={``}>
+      <body className={` bg-background text-13px text-foreground min-h-screen`}>
         <header>
           <NavBar />
         </header>
