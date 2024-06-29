@@ -1,10 +1,14 @@
-"use client"
-import { useState } from "react";
+"use client";
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function ThemeToggle() {
-  const [theme, setTheme] = useState(localStorage.getItem("portfolio-theme"));
-
+export default function ThemeToggle({
+  theme,
+  setTheme,
+}: {
+  theme: string | null;
+  setTheme: (arg0: string) => void;
+}) {
+  /* moved theme state to parent component*/
   function handleToggleTheme() {
     const html = document.documentElement;
     const currentTheme = html.classList.contains("light") ? "light" : "dark";
@@ -67,10 +71,10 @@ export default function ThemeToggle() {
             // transition={{ duration: 2 }}
             stroke="currentColor"
             fill="none"
-            stroke-width="2"
+            strokeWidth="2"
             viewBox="0 0 24 24"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             height="19px"
             width="19px"
           >
