@@ -24,7 +24,7 @@ export default function ThemeToggle({
   return (
     <button
       onClick={handleToggleTheme}
-      className="max-w-max rounded-full p-1 text-foreground hover:bg-gray-100 dark:hover:bg-gray-900"
+      className="max-w-max rounded-full p-1 text-foreground hover:bg-gray-100 dark:hover:bg-neutral-500/20"
     >
       <AnimatePresence>
         {theme === "light" ? (

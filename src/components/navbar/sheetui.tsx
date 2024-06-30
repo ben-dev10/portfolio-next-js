@@ -2,8 +2,18 @@ import { Button } from "@/ui/button";
 import { Sheet, SheetContent, SheetFooter, SheetTrigger } from "@/ui/sheet";
 import Link from "next/link";
 import { useState } from "react";
-import { Bookmark, GalleryHorizontalEnd, Home, Layers } from "lucide-react";
+import {
+  Bookmark,
+  Building2,
+  GalleryHorizontalEnd,
+  GalleryVertical,
+  Home,
+  Layers,
+} from "lucide-react";
 import "./navbar.css";
+import nardLogo from "public/logos/nard-logo-1.svg";
+
+import Image from "next/image";
 
 export function SheetUI() {
   const [open, setOpen] = useState(false);
@@ -16,7 +26,6 @@ export function SheetUI() {
         <SheetTrigger asChild>
           <Button className="pl-0 shadow-none bg-transparent hover:bg-transparent">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               width="18"
               height="18"
               viewBox="0 0 18 18"
@@ -49,28 +58,28 @@ export function SheetUI() {
         </SheetTrigger>
         <SheetContent
           side="left"
-          className="w-full md:hidden absolute top-0 h-screen md:max-w-full flex flex-col bg-gray-500/50 backdrop-blur-[20px] p-5"
+          className="w-full md:hidden absolute top-0 h-screen md:max-w-full flex flex-col bg-white/40 dark:bg-black/40 backdrop-blur-[20px] p-5 pt-3 pl-3"
         >
-          <div className="links gap-3 flex flex-col mt-5 text-[13px] border-slate-600  pb-2 max-w-[350px] w-[70%] mx-auto mb-auto">
+          <div className="links gap-3 flex flex-col mt-10 text-[13px] border-slate-600  pb-2 max-w-[350px] w-[70%] mx-auto mb-auto">
             <div onClick={handleClick} className="space-y-3">
               <Link href="/" className="sheet-link">
                 <Home size={16} />
                 Home
               </Link>
               <Link href="/gallery" className="sheet-link">
-                <Bookmark size={16} />
+                <GalleryVertical size={16} />
                 Gallery
               </Link>
               <Link href="/work" className="sheet-link">
-                <GalleryHorizontalEnd size={16} />
+                <Building2 size={16} />
                 Work
               </Link>
             </div>
           </div>
 
           <SheetFooter>
-            <div className="flex gap-1 w-full items-center border border-accent p-2 px-3 rounded-md bg-[rgba(64,195,53,.9)] ">
-              <Layers size={16} className="text-green-50" />
+            <div className="flex gap-1 w-full items-center ring ring-accent/50 p-2 px-3 rounded-md bg-gradient-to-r from-accent to-purple-900 ">
+              <Image src={nardLogo} className="mr-1" width={20} alt="nard logo" />
               <p className="text-white">Nard Designs</p>
             </div>
           </SheetFooter>

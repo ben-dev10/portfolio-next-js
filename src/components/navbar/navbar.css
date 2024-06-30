@@ -1,5 +1,5 @@
 .sheet-link {
-    @apply border-b border-dashed dark:border-slate-500 border-slate-300 pb-2 flex items-center gap-1 hover:text-accent
+    @apply p-2 flex items-center gap-2 hover:bg-accent/90 hover:text-white rounded-md transition-colors delay-100
 }
 
 .active::after {
@@ -12,4 +12,12 @@
     bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.size-md {
+    width: 18px
+}
+
+.size-lg {
+    width: 24px
 }

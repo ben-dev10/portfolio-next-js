@@ -94,7 +94,7 @@ function CV() {
         <Button
           variant="pill"
           size="pill"
-          className="text-accent bg-accent flex text-white px-2 py-[2px] hover:border-[hsla(var(--accent)_9)]"
+          className="text-accent bg-accent flex text-white px-2 py-[2px] hover:ring-[4px] hover:ring-accent/30"
         >
           CV
           <Download size={14} className="ml-1" />
@@ -109,7 +109,7 @@ export default function NavBar() {
 
   useTheme();
   return (
-    <div className="header-wrapper border-b border-border">
+    <div className="header-wrapper border-b border-border bg-gray-50 dark:bg-gradient-to-bl dark:from-stone-950 dark:to-neutral-950">
       <div className="container-4xl w-full h-[60px]">
         <div className="primary-nav flex gap-x-3 items-center p-2 pt-3 md:pt-4 px-4">
           <MenuIcon />
