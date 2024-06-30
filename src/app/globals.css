@@ -82,9 +82,38 @@
   --shadow-xl: ;
 }
 
+/* expo inspired */
+.darkmode-3 {
+  --background: 0, 0%, 13%;
+  --background-secondary: ;
+  --foreground: 0, 0%, 64%;
+  --foreground-secondary: 0, 0%, 98%;
+
+  --surface: 220, 7%, 16%;
+  --surface-secondary: ;
+
+  --accent: ;
+  --accent-foreground: ;
+
+  --border: 0, 0%, 26%;
+  --border-secondary: ;
+
+  --icon: ;
+  --icon-secondary: 0, 0%, 74%;
+
+  --shadow-sm: ;
+  --shadow-md: ;
+  --shadow-lg: ;
+  --shadow-xl: ;
+}
+
 /* 
 * GLOBAL CLASSES
 */
 .container-4xl {
   @apply max-w-4xl mx-auto
+}
+
+.social-link-icon {
+  @apply hover:fill-accent hover:stroke-accent
 }

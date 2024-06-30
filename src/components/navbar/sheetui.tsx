@@ -2,18 +2,11 @@ import { Button } from "@/ui/button";
 import { Sheet, SheetContent, SheetFooter, SheetTrigger } from "@/ui/sheet";
 import Link from "next/link";
 import { useState } from "react";
-import {
-  Bookmark,
-  Building2,
-  GalleryHorizontalEnd,
-  GalleryVertical,
-  Home,
-  Layers,
-} from "lucide-react";
+import { Building2, GalleryVertical, Home } from "lucide-react";
 import "./navbar.css";
 import nardLogo from "public/logos/nard-logo-1.svg";
-
 import Image from "next/image";
+import SocialLinkIcons from "./social-icons";
 
 export function SheetUI() {
   const [open, setOpen] = useState(false);
@@ -60,8 +53,16 @@ export function SheetUI() {
           side="left"
           className="w-full md:hidden absolute top-0 h-screen md:max-w-full flex flex-col bg-white/40 dark:bg-black/40 backdrop-blur-[20px] p-5 pt-3 pl-3"
         >
-          <div className="links gap-3 flex flex-col mt-10 text-[13px] border-slate-600  pb-2 max-w-[350px] w-[70%] mx-auto mb-auto">
-            <div onClick={handleClick} className="space-y-3">
+          <div className="links gap-3 flex flex-col text-[13px] max-w-[450px] w-[90%] mx-auto mb-auto">
+            <div className="icons pb-2 flex justify-end">
+              <div className="absolute right-[25px]">
+                <SocialLinkIcons GitHub X />
+              </div>
+            </div>
+            <div className="w-full line-wrapper absolute left-0 mt-8 h-1  ">
+              <div className="line w-[100%] mx-auto border-b border-border" />
+            </div>
+            <div onClick={handleClick} className="mt-8 space-y-3">
               <Link href="/" className="sheet-link">
                 <Home size={16} />
                 Home
@@ -77,9 +78,14 @@ export function SheetUI() {
             </div>
           </div>
 
-          <SheetFooter>
+          <SheetFooter className="bg-gray-50 dark:bg-black/30 p-8 absolute bottom-0 left-0 w-full border-t border-border">
             <div className="flex gap-1 w-full items-center ring ring-accent/50 p-2 px-3 rounded-md bg-gradient-to-r from-accent to-purple-900 ">
-              <Image src={nardLogo} className="mr-1" width={20} alt="nard logo" />
+              <Image
+                src={nardLogo}
+                className="mr-1"
+                width={20}
+                alt="nard logo"
+              />
               <p className="text-white">Nard Designs</p>
             </div>
           </SheetFooter>

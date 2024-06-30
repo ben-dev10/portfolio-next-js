@@ -11,6 +11,7 @@ import "./navbar.css";
 import ThemeToggle from "./themeToggle";
 import navLogo from "public/logos/nard-logo-1.svg";
 import navLogoDark from "public/logos/nard-logo-1-darkmode.svg";
+import SocialLinkIcons from "./social-icons";
 
 function Logo({ theme }: { theme: string | null }) {
   const isDarkMode = theme === "dark";
@@ -45,7 +46,7 @@ function Links() {
             <Link
               href={link.path}
               id="navLink"
-              className={` relative ${
+              className={` hover:text-accent relative ${
                 isActive(link.path) ? "text-accent font-bold active" : ""
               }`}
             >
@@ -94,7 +95,7 @@ function CV() {
         <Button
           variant="pill"
           size="pill"
-          className="text-accent bg-accent flex text-white px-2 py-[2px] hover:ring-[4px] hover:ring-accent/30"
+          className="text-accent border-0 bg-accent flex text-white px-2 py-[2px] hover:ring-[4px] hover:ring-accent/30"
         >
           CV
           <Download size={14} className="ml-1" />
@@ -117,6 +118,9 @@ export default function NavBar() {
           <Availability status="available" className="hidden md:flex mr-2" />
           <CV />
           <Links />
+          <div className="ml-2 hidden md:block">
+            <SocialLinkIcons GitHub />
+          </div>
           <ThemeToggle theme={theme} setTheme={setTheme} />
         </div>
       </div>
