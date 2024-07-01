@@ -14,6 +14,7 @@ export const GitHubIcon = () => {
     </a>
   );
 };
+
 export const YouTubeIcon = () => {
   return (
     <a href="">
@@ -68,27 +69,55 @@ export const IGIcon = () => {
   );
 };
 
+export const DiscordIcon = () => {
+  return (
+    <a href="">
+      <svg
+        className="social-link-icon size-5"
+        stroke="currentColor"
+        fill="currentColor"
+        width="20"
+        height="16"
+      >
+        <desc lang="en-US">Discord icon</desc>
+        <path
+          d="M16.93 1.326A15.93 15.93 0 0 0 12.86.001a.06.06 0 0 0-.066.033c-.175.328-.37.756-.506 1.092a14.516 14.516 0 0 0-4.573 0A11.295 11.295 0 0 0 7.2.034.063.063 0 0 0 7.135 0C5.707.26 4.34.711 3.065 1.326a.06.06 0 0 0-.028.024C.444 5.416-.266 9.382.083 13.298c.001.02.011.038.026.05a16.296 16.296 0 0 0 4.994 2.65.063.063 0 0 0 .07-.025c.385-.552.728-1.133 1.022-1.744a.068.068 0 0 0-.035-.093 10.7 10.7 0 0 1-1.56-.78.07.07 0 0 1-.007-.112c.105-.082.21-.168.31-.255a.06.06 0 0 1 .065-.009c3.273 1.569 6.817 1.569 10.051 0a.06.06 0 0 1 .066.008c.1.087.205.174.31.256.036.029.034.088-.005.112-.499.306-1.017.564-1.561.78a.068.068 0 0 0-.034.093c.3.61.643 1.192 1.02 1.743a.062.062 0 0 0 .07.025 16.242 16.242 0 0 0 5.003-2.65.069.069 0 0 0 .026-.048c.417-4.528-.699-8.461-2.957-11.948a.052.052 0 0 0-.026-.025ZM6.684 10.914c-.985 0-1.797-.95-1.797-2.116 0-1.166.796-2.116 1.797-2.116 1.01 0 1.814.958 1.798 2.116 0 1.166-.796 2.116-1.798 2.116Zm6.646 0c-.986 0-1.797-.95-1.797-2.116 0-1.166.796-2.116 1.797-2.116 1.009 0 1.813.958 1.797 2.116 0 1.166-.788 2.116-1.797 2.116Z"
+          fill="#92A0B3"
+        />
+      </svg>
+    </a>
+  );
+};
+
+/*
+ * Component Usage: only the props you pass will be rendered
+ * eg: <SocialLinkIcons GitHub IG Discord />
+ */
 export default function SocialLinkIcons({
   GitHub,
   IG,
   X,
   YouTube,
+  Discord,
 }: {
   GitHub?: boolean;
   IG?: boolean;
   X?: boolean;
   YouTube?: boolean;
+  Discord?: boolean;
 }) {
   const githubIcon = GitHub ? <GitHubIcon /> : "";
   const youtubeIcon = YouTube ? <YouTubeIcon /> : "";
   const xIcon = X ? <XIcon /> : "";
   const igIcon = IG ? <IGIcon /> : "";
+  const discordIcon = Discord ? <DiscordIcon /> : "";
   return (
     <div className="social-icons flex items-center gap-2">
       {githubIcon}
       {youtubeIcon}
       {xIcon}
       {igIcon}
+      {discordIcon}
     </div>
   );
 }

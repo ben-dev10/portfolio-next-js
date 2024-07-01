@@ -17,7 +17,7 @@ export function SheetUI() {
     <div className="">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button className="pl-0 shadow-none bg-transparent hover:bg-transparent">
+          <Button className="pl-0 px-2 py-[6px] shadow-none bg-transparent hover:bg-gray-100 dark:hover:bg-neutral-500/10">
             <svg
               width="18"
               height="18"
@@ -51,7 +51,7 @@ export function SheetUI() {
         </SheetTrigger>
         <SheetContent
           side="left"
-          className="w-full md:hidden absolute top-0 h-screen md:max-w-full flex flex-col bg-white/40 dark:bg-black/40 backdrop-blur-[20px] p-5 pt-3 pl-3"
+          className="w-full md:hidden absolute top-[0px] h-screen md:max-w-full flex flex-col bg-white/[.88] dark:bg-black/[.84] backdrop-blur-[20px] p-5 pt-3 pl-3"
         >
           <div className="links gap-3 flex flex-col text-[13px] max-w-[450px] w-[90%] mx-auto mb-auto">
             <div className="icons pb-2 flex justify-end">

@@ -11,6 +11,7 @@
 */
 
 :root {
+  /* wikipedia ---------------- */
   --background: 270 6% 7%;
   --background-secondary: 270 6% 7%;
   --foreground: 260 5% 62%;
@@ -30,6 +31,31 @@
   --shadow-md: ;
   --shadow-lg: ;
   --shadow-xl: ;
+
+
+  /* expo ----------------------- */
+  /* --background: 200, 7%, 9%;
+    --background-secondary: ;
+    --foreground: 207, 6%, 63%;
+    --foreground-secondary: 210, 6%, 93%;
+  
+    --surface: 195, 7%, 11%;
+    --surface-secondary: ;
+  
+    --accent: 258 90% 66%;
+    --accent-foreground: ;
+  
+    --border: 202, 6%, 24%;
+    --border-secondary: ;
+  
+    --icon: ;
+    --icon-secondary: ;
+  
+    --shadow-sm: ;
+    --shadow-md: ;
+    --shadow-lg: ;
+    --shadow-xl: ; */
+
 }
 
 .light {
@@ -84,22 +110,22 @@
 
 /* expo inspired */
 .darkmode-3 {
-  --background: 0, 0%, 13%;
+  --background: 200, 7%, 9%;
   --background-secondary: ;
-  --foreground: 0, 0%, 64%;
-  --foreground-secondary: 0, 0%, 98%;
+  --foreground: 207, 6%, 63%;
+  --foreground-secondary: 210, 6%, 93%;
 
-  --surface: 220, 7%, 16%;
+  --surface: 195, 7%, 11%;
   --surface-secondary: ;
 
   --accent: ;
   --accent-foreground: ;
 
-  --border: 0, 0%, 26%;
+  --border: 202, 6%, 24%;
   --border-secondary: ;
 
   --icon: ;
-  --icon-secondary: 0, 0%, 74%;
+  --icon-secondary: ;
 
   --shadow-sm: ;
   --shadow-md: ;

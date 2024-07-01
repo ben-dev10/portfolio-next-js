@@ -112,7 +112,7 @@ export default function NavBar() {
   return (
     <div className="header-wrapper border-b border-border bg-gray-50 dark:bg-gradient-to-bl dark:from-stone-950 dark:to-neutral-950">
       <div className="container-4xl w-full h-[60px]">
-        <div className="primary-nav flex gap-x-3 items-center p-2 pt-3 md:pt-4 px-4">
+        <div className="primary-nav flex gap-x-3 items-center p-2 pl-[7px] pt-3 md:pt-4 px-4">
           <MenuIcon />
           <Logo theme={theme} />
           <Availability status="available" className="hidden md:flex mr-2" />
