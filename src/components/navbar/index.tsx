@@ -105,6 +105,8 @@ function CV() {
   );
 }
 
+
+// TODO: experimental expandable navbar
 export default function NavBar() {
   const [theme, setTheme] = useState(localStorage.getItem("portfolio-theme"));
 

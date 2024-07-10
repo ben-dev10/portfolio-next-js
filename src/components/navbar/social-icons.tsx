@@ -4,7 +4,7 @@ export const GitHubIcon = () => {
       <svg
         stroke="currentColor"
         fill="currentColor"
-        stroke-width="0"
+        strokeWidth="0"
         viewBox="0 0 496 512"
         className="social-link-icon size-5"
       >
@@ -21,7 +21,7 @@ export const YouTubeIcon = () => {
       <svg
         stroke="currentColor"
         fill="currentColor"
-        stroke-width="0"
+        strokeWidth="0"
         viewBox="0 0 576 512"
         className="social-link-icon size-6"
       >
@@ -58,7 +58,7 @@ export const IGIcon = () => {
       <svg
         stroke="currentColor"
         fill="currentColor"
-        stroke-width="0"
+        strokeWidth="0"
         viewBox="0 0 448 512"
         className="social-link-icon size-5"
       >
