@@ -1,6 +1,47 @@
+"use client"
 import Image from "next/image";
 import nardLogo from "public/logos/nard-logo-2b.svg";
 import SocialLinkIcons from "../navbar/social-icons";
+
+interface LinksType {}
+
+
+export const FooterLinks = () => {
+  const footerLinksData = [
+    {
+      id: 1,
+      header: "Gallery",
+      links: [
+        {
+          id: "1i",
+          text: "2D",
+          link: "https://3d",
+        },
+        {
+          id: "1ii",
+          text: "2D",
+          link: "https://3d",
+        },
+      ],
+    },
+  ];
+  return (
+    <div className="footer-links flex gap-5">
+      {footerLinksData.map((dataMain) => (
+        <div key={dataMain.id}>
+          <p className="font-bold text-13px">{dataMain.header}</p>
+          <ul className="flex flex-col">
+            {dataMain["links"].map((data) => (
+              <a href={data.link} key={data.id}>
+                {data.text}
+              </a>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export const FooterHeader = () => {
   return (
@@ -18,9 +59,9 @@ export const FooterHeader = () => {
 
 export const FooterData = ({ className }: { className?: string }) => {
   return (
-    <div className={`${className} divide-y divide-border max-w-[300px]`}>
+    <div className={`${className} max-w-[300px]`}>
       <div className="mb-2">
-        <p className="flex items-center">
+        <p className="flex items-center mb-2">
           Built by{" "}
           <a href="#" className="text-accent underline px-1">
             nard
@@ -36,8 +77,9 @@ export const FooterData = ({ className }: { className?: string }) => {
         </p>
         <p>&copy; 2024 - 2024. All rights reserved. </p>
       </div>
-      <div className="mt-2 translate-y-[10px]">
-        <SocialLinkIcons GitHub X  />
+      <div className="border-[1px] border-b border-border"></div>
+      <div className="mt-2 ">
+        <SocialLinkIcons GitHub X />
       </div>
     </div>
   );
@@ -49,7 +91,9 @@ export const MobileFooter = () => {
       <FooterHeader />
       <FooterData className="mt-4" />
 
-      <div className="footer-links mt-3">Links</div>
+      <div className="footer-links mt-5">
+        <FooterLinks />
+      </div>
     </div>
   );
 };
