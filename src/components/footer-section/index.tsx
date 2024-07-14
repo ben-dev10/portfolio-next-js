@@ -5,6 +5,9 @@ import SocialLinkIcons from "../navbar/social-icons";
 import { ExternalLink } from "lucide-react";
 import { footerLinksData } from "./footerLinksData";
 import nardLogoLarge from "public/logos/nard-logo-1.svg";
+import { useContext } from "react";
+import { AppContext } from "../../app/store";
+import nardLogoDark from "public/logos/nard-logo-1-darkmode.svg";
 
 export const FooterLinks = () => {
   return (
@@ -37,6 +40,12 @@ export const FooterLinks = () => {
 };
 
 export const FooterHeader = () => {
+  const context = useContext(AppContext);
+  if (!context) {
+    throw new Error("useContext must be used within an AppProvider");
+  }
+  const { theme } = context;
+
   return (
     <div>
       <div className="">
@@ -109,13 +118,21 @@ export const DesktopFooter = () => {
 
 // TODO: dark theme optimize
 export default function Footer() {
+  const context = useContext(AppContext);
+
+  if (!context) {
+    throw new Error("useContext must be used within an AppProvider");
+  }
+
+  const { theme } = context;
+
   return (
-    <div className="wrapper bg-white border-t border-border">
-      <div className="container-4xl p-5 mt-4 relative overflow-hidden pb-[120px] md:pb-[160px]">
+    <div className="wrapper bg-white dark:bg-zinc-900 border-t border-border">
+      <div className=" group container-4xl p-5 mt-4 relative overflow-hidden pb-[120px] md:pb-[160px]">
         <div className="absolute  bottom-[-70px] md:bottom-[-100px] right-[5%]">
           <Image
-            src={nardLogoLarge}
-            className="w-[150px] md:w-[200px]"
+            src={theme === "light" ? nardLogoLarge : nardLogoDark}
+            className="w-[150px] md:w-[200px] grayscale group-hover:grayscale-0 transition duration-400"
             width={nardLogoLarge}
             alt="large nard brand logo"
           />
